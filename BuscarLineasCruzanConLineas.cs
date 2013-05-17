@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Topology;
-using UtilidadesDigi;
+using Digi21.Utilities;
 
 namespace Buscadores
 {

@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\..\Program Files %28x86%29\Digi21.net\Digi3D2011Beta\Extensiones\AcmeCorp\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\..\Program Files %28x86%29\Digi21.net\Digi3D2011Beta\Extensiones\AcmeCorp\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,7 +42,7 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>..\..\..\bin\Release\Win32\</OutputPath>
+    <OutputPath>..\..\Visual Studio 2010\Projects\bin\Release\Win32\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -76,6 +76,7 @@
     <Reference Include="Digi21.DigiNG, Version=10.0.0.1, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=x86" />
     <Reference Include="Digi21.DigiNG.Plugin, Version=10.0.0.1, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=x86" />
     <Reference Include="Digi21.DigiNG.Topology, Version=10.0.0.1, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=x86" />
+    <Reference Include="Digi21.Utilities, Version=2011.0.4885.18834, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -142,12 +143,6 @@
     <EmbeddedResource Include="FormularioPideCódigoYCadena.resx">
       <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\GitHub\UtilidadesDigi\UtilidadesDigi.csproj">
-      <Project>{EF973B15-E68D-4FA1-9454-6433A895D63A}</Project>
-      <Name>UtilidadesDigi</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

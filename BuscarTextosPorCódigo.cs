@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
-using UtilidadesDigi;
+using Digi21.Utilities;
 
 namespace Buscadores
 {
