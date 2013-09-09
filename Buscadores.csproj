@@ -42,7 +42,7 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>..\..\Visual Studio 2010\Projects\bin\Release\Win32\</OutputPath>
+    <OutputPath>..\..\..\..\..\Digi3D.NET\bin\Release\Win32\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -73,10 +73,6 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Digi21.DigiNG, Version=10.0.0.1, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=x86" />
-    <Reference Include="Digi21.DigiNG.Plugin, Version=10.0.0.1, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=x86" />
-    <Reference Include="Digi21.DigiNG.Topology, Version=10.0.0.1, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=x86" />
-    <Reference Include="Digi21.Utilities, Version=2011.0.4885.18834, Culture=neutral, PublicKeyToken=82292917b7a6e156, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -145,7 +141,22 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj">
+      <Project>{50944C8E-531B-4C7A-8856-1EB34E2E3E45}</Project>
+      <Name>Digi21.DigiNG.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Topology\Digi21.DigiNG.Topology.vcxproj">
+      <Project>{0FA683EE-452C-44CB-94E7-C6F76FE86A0C}</Project>
+      <Name>Digi21.DigiNG.Topology</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj">
+      <Project>{49C6C0A6-ABAA-403D-B11D-4DE57B47281D}</Project>
+      <Name>Digi21.DigiNG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\progsh\src\Digi21.Utilities\Digi21.Utilities\Digi21.Utilities.csproj">
+      <Project>{9F541C36-746D-4E06-899D-48332256D181}</Project>
+      <Name>Digi21.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
