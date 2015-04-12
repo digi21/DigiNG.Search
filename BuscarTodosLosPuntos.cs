@@ -8,7 +8,7 @@ using Digi21.DigiNG.Entities;
 
 namespace Buscadores
 {
-    [Searcher(Title="Todos los puntos")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTodosLosPuntosName")]
     public class BuscarTodosLosPuntos : ISearcher
     {
         public Form Form

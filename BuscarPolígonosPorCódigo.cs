@@ -9,7 +9,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Polígonos por código")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarPolígonosPorCódigoName")]
     public class BuscarPolígonosPorCódigo : ISearcher
     {
         FormularioPideCódigo form = new FormularioPideCódigo();
@@ -21,7 +21,7 @@ namespace Buscadores
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            return entities.SoloPolígonos().QueTenganElCódigoConComodín(form.Código);
+            return entities.OfType<ReadOnlyPolygon>().QueTenganElCódigoConComodín(form.Código);
         }
     }
 }

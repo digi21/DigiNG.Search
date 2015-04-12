@@ -8,7 +8,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Todos los polígonos")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTodosLosPolígonosName")]
     public class BuscarTodosLosPolígonos : ISearcher
     {
         public System.Windows.Forms.Form Form
@@ -18,7 +18,7 @@ namespace Buscadores
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            return entities.SoloPolígonos();
+            return entities.OfType<ReadOnlyPolygon>();
         }
     }
 }

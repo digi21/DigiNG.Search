@@ -8,7 +8,7 @@ using Digi21.DigiNG.Entities;
 
 namespace Buscadores
 {
-    [Searcher(Title="Todas las líneas")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasLíneasName")]
     public class BuscarTodasLasLíneas : ISearcher
     {
         public Form Form

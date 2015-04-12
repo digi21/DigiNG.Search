@@ -9,7 +9,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Todas las entidades por código")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasEntidadesPorCodigoName")]
     public class BuscarTodasLasEntidadesPorCodigo : ISearcher
     {
         FormularioPideCódigo form = new FormularioPideCódigo();

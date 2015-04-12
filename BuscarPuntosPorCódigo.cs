@@ -9,7 +9,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Puntos por código")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarPuntosPorCódigoName")]
     public class BuscarPuntosPorCódigo : ISearcher
     {
         FormularioPideCódigo form = new FormularioPideCódigo();
@@ -21,7 +21,7 @@ namespace Buscadores
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            return entities.SoloPuntos().QueTenganElCódigoConComodín(form.Código);
+            return entities.OfType<ReadOnlyPoint>().QueTenganElCódigoConComodín(form.Código);
         }
     }
 }

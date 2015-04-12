@@ -8,7 +8,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Todas las entidades")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasEntidadesName")]
     public class BuscarTodasLasEntidades : ISearcher
     {
         public System.Windows.Forms.Form Form

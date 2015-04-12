@@ -9,7 +9,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Textos por código y cadena")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCódigoYCadenaName")]
     public class BuscarTextosPorCódigoYCadena : ISearcher
     {
         FormularioPideCódigoYCadena form = new FormularioPideCódigoYCadena();
@@ -22,21 +22,21 @@ namespace Buscadores
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
             if (form.CoincidirMayúsculasMinúsculas && form.SóloPalabrasCompletas)
-                return from texto in entities.QueTenganElCódigoConComodín(form.Código).SoloTextos()
+                return from texto in entities.QueTenganElCódigoConComodín(form.Código).OfType<ReadOnlyText>()
                        where texto.Txt == form.CadenaBuscar
                        select texto;
 
             if (form.CoincidirMayúsculasMinúsculas)
-                return from texto in entities.QueTenganElCódigoConComodín(form.Código).SoloTextos()
+                return from texto in entities.QueTenganElCódigoConComodín(form.Código).OfType<ReadOnlyText>()
                        where texto.Txt.Contains(form.CadenaBuscar)
                        select texto;
 
             if (form.SóloPalabrasCompletas)
-                return from texto in entities.QueTenganElCódigoConComodín(form.Código).SoloTextos()
+                return from texto in entities.QueTenganElCódigoConComodín(form.Código).OfType<ReadOnlyText>()
                        where texto.Txt.ToUpper() == form.CadenaBuscar.ToUpper()
                        select texto;
 
-            return from texto in entities.QueTenganElCódigoConComodín(form.Código).SoloTextos()
+            return from texto in entities.QueTenganElCódigoConComodín(form.Código).OfType<ReadOnlyText>()
                    where texto.Txt.ToUpper().Contains(form.CadenaBuscar.ToUpper())
                    select texto;
         }

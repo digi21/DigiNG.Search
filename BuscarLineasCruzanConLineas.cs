@@ -5,10 +5,11 @@ using System.Text;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Topology;
 using Digi21.Utilities;
+using Digi21.DigiNG.Entities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Líneas que cruzan con otras líneas")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarLineasCruzanConLineasName")]
     public class BuscarLineasCruzanConLineas : ISearcher
     {
         private FormularioBuscarLíneasQueCruzanConOtrasLíneas formulario = new FormularioBuscarLíneasQueCruzanConOtrasLíneas();
@@ -18,13 +19,13 @@ namespace Buscadores
             get { return formulario; }
         }
 
-        public IEnumerable<Digi21.DigiNG.Entities.Entity> Search(IEnumerable<Digi21.DigiNG.Entities.Entity> entities)
+        public IEnumerable<Digi21.DigiNG.Entities.Entity> Search(IEnumerable<Entity> entities)
         {
             IEnumerable<string> códigosPrincipales = formulario.CódigosPrincipales;
             IEnumerable<string> códigosSecundarios = formulario.CódigosSecundarios;
             IEnumerable<string> todosLosCódigos = formulario.TodosLosCódigos;
 
-            var líneasABuscar = entities.QueTenganAlgúnCódigoConComodín(todosLosCódigos).SoloLíneas();
+            var líneasABuscar = entities.QueTenganAlgúnCódigoConComodín(todosLosCódigos).OfType<ReadOnlyLine>();
 
             var intersecciones = líneasABuscar.DetectIntersections(
                 (líneaA, líneaB) => 

@@ -9,7 +9,7 @@ using Digi21.Utilities;
 namespace Buscadores
 {
     // He hecho la clase internal para que no aparezca
-    [Searcher(Title = "Líneas con un número impar de vértices")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarLíneasConNúmeroImparDeVérticesName")]
     internal class BuscarLíneasConNúmeroImparDeVértices : ISearcher
     {
         public System.Windows.Forms.Form Form

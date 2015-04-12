@@ -9,7 +9,7 @@ using Digi21.Utilities;
 
 namespace Buscadores
 {
-    [Searcher(Title = "Textos por código")]
+    [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCódigoName")]
     public class BuscarTextosPorCódigo : ISearcher
     {
         FormularioPideCódigo form = new FormularioPideCódigo();
@@ -21,7 +21,7 @@ namespace Buscadores
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            return entities.SoloTextos().QueTenganElCódigoConComodín(form.Código);
+            return entities.OfType<ReadOnlyText>().QueTenganElCódigoConComodín(form.Código);
         }
     }
 }
