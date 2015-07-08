@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioBuscarEntidadesAtributoNulo));
             this.camposExcluir = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -35,33 +36,24 @@
             // camposExcluir
             // 
             this.camposExcluir.AcceptsReturn = true;
-            this.camposExcluir.Location = new System.Drawing.Point(13, 25);
-            this.camposExcluir.Multiline = true;
+            resources.ApplyResources(this.camposExcluir, "camposExcluir");
             this.camposExcluir.Name = "camposExcluir";
-            this.camposExcluir.Size = new System.Drawing.Size(259, 147);
-            this.camposExcluir.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Campos a excluir del análisis";
             // 
             // FormularioBuscarEntidadesAtributoNulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 186);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.camposExcluir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormularioBuscarEntidadesAtributoNulo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "FormularioBuscarEntidadesAtributoNulo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

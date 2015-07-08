@@ -28,36 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioBuscarEntidadesAtributoNuloPorCampo));
             this.campo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // campo
             // 
-            this.campo.Location = new System.Drawing.Point(65, 25);
+            resources.ApplyResources(this.campo, "campo");
             this.campo.Name = "campo";
-            this.campo.Size = new System.Drawing.Size(207, 20);
-            this.campo.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 32);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Campo";
             // 
-            // FormularioBuscarEntidadesAtributoNulo
+            // FormularioBuscarEntidadesAtributoNuloPorCampo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 77);
             this.Controls.Add(this.campo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormularioBuscarEntidadesAtributoNulo";
-            this.Text = "FormularioBuscarEntidadesAtributoNulo";
+            this.Name = "FormularioBuscarEntidadesAtributoNuloPorCampo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

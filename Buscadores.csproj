@@ -213,23 +213,44 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNulo.es.resx">
+      <DependentUpon>FormularioBuscarEntidadesAtributoNulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNulo.resx">
       <DependentUpon>FormularioBuscarEntidadesAtributoNulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNuloPorCampo.es.resx">
+      <DependentUpon>FormularioBuscarEntidadesAtributoNuloPorCampo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNuloPorCampo.resx">
       <DependentUpon>FormularioBuscarEntidadesAtributoNuloPorCampo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioBuscarLíneasCriterio.es.resx">
+      <DependentUpon>FormularioBuscarLíneasCriterio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioBuscarLíneasCriterio.resx">
       <DependentUpon>FormularioBuscarLíneasCriterio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioBuscarLíneasQueCruzanConOtrasLíneas.es.resx">
+      <DependentUpon>FormularioBuscarLíneasQueCruzanConOtrasLíneas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioBuscarLíneasQueCruzanConOtrasLíneas.resx">
       <DependentUpon>FormularioBuscarLíneasQueCruzanConOtrasLíneas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPideCadena.es.resx">
+      <DependentUpon>FormularioPideCadena.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioPideCadena.resx">
       <DependentUpon>FormularioPideCadena.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPideCódigo.es.resx">
+      <DependentUpon>FormularioPideCódigo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioPideCódigo.resx">
       <DependentUpon>FormularioPideCódigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPideCódigoYCadena.es.resx">
+      <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioPideCódigoYCadena.resx">
       <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPideCadena));
             this.label1 = new System.Windows.Forms.Label();
             this.cadenaBuscar = new System.Windows.Forms.TextBox();
             this.coincidirMayúsculasMinúsculas = new System.Windows.Forms.CheckBox();
@@ -36,54 +37,36 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Buscar textos con la cadena";
             // 
             // cadenaBuscar
             // 
-            this.cadenaBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadenaBuscar.Location = new System.Drawing.Point(15, 26);
+            resources.ApplyResources(this.cadenaBuscar, "cadenaBuscar");
             this.cadenaBuscar.Name = "cadenaBuscar";
-            this.cadenaBuscar.Size = new System.Drawing.Size(257, 20);
-            this.cadenaBuscar.TabIndex = 1;
             // 
             // coincidirMayúsculasMinúsculas
             // 
-            this.coincidirMayúsculasMinúsculas.AutoSize = true;
-            this.coincidirMayúsculasMinúsculas.Location = new System.Drawing.Point(15, 53);
+            resources.ApplyResources(this.coincidirMayúsculasMinúsculas, "coincidirMayúsculasMinúsculas");
             this.coincidirMayúsculasMinúsculas.Name = "coincidirMayúsculasMinúsculas";
-            this.coincidirMayúsculasMinúsculas.Size = new System.Drawing.Size(179, 17);
-            this.coincidirMayúsculasMinúsculas.TabIndex = 2;
-            this.coincidirMayúsculasMinúsculas.Text = "Coincidir mayúsculas minúsculas";
             this.coincidirMayúsculasMinúsculas.UseVisualStyleBackColor = true;
             // 
             // sóloPalabrasCompletas
             // 
-            this.sóloPalabrasCompletas.AutoSize = true;
-            this.sóloPalabrasCompletas.Location = new System.Drawing.Point(15, 77);
+            resources.ApplyResources(this.sóloPalabrasCompletas, "sóloPalabrasCompletas");
             this.sóloPalabrasCompletas.Name = "sóloPalabrasCompletas";
-            this.sóloPalabrasCompletas.Size = new System.Drawing.Size(141, 17);
-            this.sóloPalabrasCompletas.TabIndex = 3;
-            this.sóloPalabrasCompletas.Text = "Sólo palabras completas";
             this.sóloPalabrasCompletas.UseVisualStyleBackColor = true;
             // 
             // FormularioPideCadena
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 108);
             this.Controls.Add(this.sóloPalabrasCompletas);
             this.Controls.Add(this.coincidirMayúsculasMinúsculas);
             this.Controls.Add(this.cadenaBuscar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormularioPideCadena";
-            this.Text = "FormularioPideCadena";
             this.ResumeLayout(false);
             this.PerformLayout();
 
