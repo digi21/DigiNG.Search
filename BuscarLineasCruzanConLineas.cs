@@ -1,29 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Topology;
 using Digi21.Utilities;
 using Digi21.DigiNG.Entities;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarLineasCruzanConLineasName")]
     public class BuscarLineasCruzanConLineas : ISearcher
     {
-        private FormularioBuscarLíneasQueCruzanConOtrasLíneas formulario = new FormularioBuscarLíneasQueCruzanConOtrasLíneas();
+        private readonly FormularioBuscarLíneasQueCruzanConOtrasLíneas formulario = new FormularioBuscarLíneasQueCruzanConOtrasLíneas();
+        public System.Windows.Forms.Form Form => formulario;
 
-        public System.Windows.Forms.Form Form
+        public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            get { return formulario; }
-        }
-
-        public IEnumerable<Digi21.DigiNG.Entities.Entity> Search(IEnumerable<Entity> entities)
-        {
-            IEnumerable<string> códigosPrincipales = formulario.CódigosPrincipales;
-            IEnumerable<string> códigosSecundarios = formulario.CódigosSecundarios;
-            IEnumerable<string> todosLosCódigos = formulario.TodosLosCódigos;
+            var códigosPrincipales = formulario.CódigosPrincipales.ToList();
+            var códigosSecundarios = formulario.CódigosSecundarios.ToList();
+            var todosLosCódigos = formulario.TodosLosCódigos;
 
             var líneasABuscar = entities.QueTenganAlgúnCódigoConComodín(todosLosCódigos).OfType<ReadOnlyLine>();
 

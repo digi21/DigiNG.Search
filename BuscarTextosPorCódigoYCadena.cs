@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
 using Digi21.Utilities;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCódigoYCadenaName")]
     public class BuscarTextosPorCódigoYCadena : ISearcher
     {
-        FormularioPideCódigoYCadena form = new FormularioPideCódigoYCadena();
-
-        public Form Form
-        {
-            get { return form; }
-        }
+        private readonly FormularioPideCódigoYCadena form = new FormularioPideCódigoYCadena();
+        public Form Form => form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {

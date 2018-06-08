@@ -1,43 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.Plugin;
 using System.Windows.Forms;
-using Buscadores;
+using Digi21.Utilities;
+using Digi21Search;
 
-namespace BuscarAtributos
+namespace Digi21.Search
 {
-    public static class Jander
-    {
-        public static IEnumerable<string> CódigosComunes(this Entity entidad, IEnumerable<string> códigos)
-        {
-            var lista = new List<string>();
-
-            foreach (Code código in entidad.Codes)
-                foreach (string cod in códigos)
-                    if (Code.Compare(código.Name, cod))
-                        if (!lista.Contains(cod))
-                            lista.Add(cod);
-            return lista;
-        }
-    }
-
     [Searcher(Title = "Buscar por atributos de BBDD")]
     public class BuscarPorCampoBBDD : ISearcher
     {
-        private FormularioBuscarPorCampoBBDD form = new FormularioBuscarPorCampoBBDD();
+        private readonly FormularioBuscarPorCampoBBDD form = new FormularioBuscarPorCampoBBDD();
 
-        public Form Form
-        {
-            get { return form; }
-        }
+        public Form Form => form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
             // Obtenemos los códigos que apuntan a esa tabla
             var códigos = (from código in Digi21.DigiNG.DigiNG.DigiTab.Codes
-                          where 0 == string.Compare(form.Tabla, código.Table)
+                          where 0 == string.CompareOrdinal(form.Tabla, código.Table)
                           select código.Name).ToList();
 
             var candidatos = from entidad in entities
@@ -67,7 +49,7 @@ namespace BuscarAtributos
             if (form.SóloPalabrasCompletas)
                 return from candidato in candidatos
                        let atributo = candidato.Atributo as string
-                       where 0 == string.Compare(atributo, form.CadenaBuscar)
+                       where 0 == string.CompareOrdinal(atributo, form.CadenaBuscar)
                        select candidato.Entidad;
 
             return from candidato in candidatos

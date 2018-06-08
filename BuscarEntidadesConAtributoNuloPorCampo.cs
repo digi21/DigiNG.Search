@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
 using System.Windows.Forms;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarEntidadesConAtributoNuloPorCampoName")]
     public class BuscarEntidadesConAtributoNuloPorCampo : ISearcher
     {
-        FormularioBuscarEntidadesAtributoNuloPorCampo formulario = new FormularioBuscarEntidadesAtributoNuloPorCampo();
-
-        public Form Form
-        {
-            get { return formulario; }
-        }
+        private readonly FormularioBuscarEntidadesAtributoNuloPorCampo formulario = new FormularioBuscarEntidadesAtributoNuloPorCampo();
+        public Form Form => formulario;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
@@ -27,14 +21,10 @@ namespace Buscadores
 
                 foreach(var código in atributos.Keys) {
                     var atributosDelCódigo = atributos[código];
-                    if (atributosDelCódigo.Keys.Contains(formulario.Campo))
-                    {
-                        if (atributosDelCódigo[formulario.Campo] == null)
-                        {
-                            localizados.Add(entidad);
-                            break;
-                        }
-                    }
+                    if (!atributos[código].Keys.Contains(formulario.Campo)) continue;
+                    if (atributosDelCódigo[formulario.Campo] != null) continue;
+                    localizados.Add(entidad);
+                    break;
                 }
                     
             }

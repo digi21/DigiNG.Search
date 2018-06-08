@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Buscadores
+namespace Digi21Search
 {
     public partial class FormularioBuscarLíneasCriterio : Form
     {

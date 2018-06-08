@@ -1,45 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarEntidadesConAtributoNuloName")]
     public class BuscarEntidadesConAtributoNulo : ISearcher
     {
-        FormularioBuscarEntidadesAtributoNulo formulario = new FormularioBuscarEntidadesAtributoNulo();
-
-        public System.Windows.Forms.Form Form
-        {
-            get { return formulario; }
-        }
+        private readonly FormularioBuscarEntidadesAtributoNulo formulario = new FormularioBuscarEntidadesAtributoNulo();
+        public System.Windows.Forms.Form Form => formulario;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
             var camposAExcluir = formulario.CamposExcluir;
 
-            List<Entity> localizados = new List<Entity>();
+            var localizados = new List<Entity>();
             foreach (var entidad in entities)
             {
                 var atributos = Digi21.DigiNG.DigiNG.DrawingFile.get_DatabaseAttributes(entidad);
 
-                bool localizado = false;
-                foreach(var código in atributos.Keys) {
-                    var atributosDelCódigo = atributos[código];
-
-                    foreach (var atributo in atributosDelCódigo )
-                    {
-                        if(!camposAExcluir.Contains(atributo.Key) && atributo.Value == null ) {
-                            localizados.Add(entidad);
-                            break;
-                        }
-                    }
-
-                    if( localizado)
-                        break;
+                foreach(var código in atributos.Keys)
+                {
+                    if (atributos[código].Any(atributo => !camposAExcluir.Contains(atributo.Key) && atributo.Value == null))
+                        localizados.Add(entidad);
                 }
                     
             }

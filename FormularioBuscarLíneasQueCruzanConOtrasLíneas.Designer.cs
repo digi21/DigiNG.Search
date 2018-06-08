@@ -1,4 +1,4 @@
-﻿namespace Buscadores
+﻿namespace Digi21Search
 {
     partial class FormularioBuscarLíneasQueCruzanConOtrasLíneas
     {

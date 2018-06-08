@@ -8,15 +8,15 @@
     <ProjectGuid>{DA29F2E1-2392-4EE1-B563-28E844C41738}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Buscadores</RootNamespace>
-    <AssemblyName>Buscadores</AssemblyName>
+    <RootNamespace>Digi21.Search</RootNamespace>
+    <AssemblyName>Digi21.Search</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\..\..\..\Digi3D.NET\bin\Debug\Win32\</OutputPath>
+    <OutputPath>bin\Debug\Win32\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -27,7 +27,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>..\..\..\..\..\Digi3D.NET\bin\Release\Win32\</OutputPath>
+    <OutputPath>bin\Release\Win32\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -40,7 +40,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\..\..\..\Digi3D.NET\bin\Debug\x64\</OutputPath>
+    <OutputPath>bin\Debug\x64\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -50,7 +50,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\..\..\..\..\Digi3D.NET\bin\Release\x64\</OutputPath>
+    <OutputPath>bin\Release\x64\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -61,6 +61,21 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Digi21.DigiNG, Version=17.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
+      <HintPath>packages\Digi21.DigiNG.x64.17.0.0\lib\net46\Digi21.DigiNG.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Digi21.DigiNG.Plugin, Version=17.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
+      <HintPath>packages\Digi21.DigiNG.Plugin.x64.17.0.0\lib\net46\Digi21.DigiNG.Plugin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Digi21.DigiNG.Topology, Version=17.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
+      <HintPath>packages\Digi21.DigiNG.Topology.x64.17.0.0\lib\net46\Digi21.DigiNG.Topology.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Digi21.Utilities, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
+      <HintPath>packages\Digi21.Utilities.x64.17.0.0\lib\net46\Digi21.Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -80,7 +95,6 @@
     <Compile Include="BuscarLíneasConNúmeroImparDeVértices.cs" />
     <Compile Include="BuscarLíneasPorCriterio.cs" />
     <Compile Include="BuscarPolígonosPorCódigo.cs" />
-    <Compile Include="BuscarPorAtributo.cs" />
     <Compile Include="BuscarPorCampoBBDD.cs" />
     <Compile Include="BuscarPuntosPorCódigo.cs" />
     <Compile Include="BuscarTextosPorCadena.cs" />
@@ -141,10 +155,10 @@
     <Compile Include="FormularioPideCódigoYCadena.Designer.cs">
       <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyResource.es-ES.Designer.cs">
+    <Compile Include="MyResource.es.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MyResource.es-ES.resx</DependentUpon>
+      <DependentUpon>MyResource.es.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MyResource.Designer.cs">
@@ -199,37 +213,20 @@
     <EmbeddedResource Include="FormularioPideCódigoYCadena.resx">
       <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="MyResource.es-ES.resx">
+    <None Include="MyResource.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MyResource.es-ES.Designer.cs</LastGenOutput>
+      <LastGenOutput>MyResource.es.Designer.cs</LastGenOutput>
     </None>
     <EmbeddedResource Include="MyResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MyResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj">
-      <Project>{50944C8E-531B-4C7A-8856-1EB34E2E3E45}</Project>
-      <Name>Digi21.DigiNG.Plugin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Topology\Digi21.DigiNG.Topology.vcxproj">
-      <Project>{0FA683EE-452C-44CB-94E7-C6F76FE86A0C}</Project>
-      <Name>Digi21.DigiNG.Topology</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj">
-      <Project>{49C6C0A6-ABAA-403D-B11D-4DE57B47281D}</Project>
-      <Name>Digi21.DigiNG</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Digi3D.NET\progsh\src\Digi21.Utilities\Digi21.Utilities\Digi21.Utilities.csproj">
-      <Project>{9F541C36-746D-4E06-899D-48332256D181}</Project>
-      <Name>Digi21.Utilities</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\Resgen.exe" "$(ProjectDir)MyResource.es-ES.resx" "$(OutDir)$(ProjectName).MyResource.es-ES.resources"
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\Al.exe" /t:lib /embed:"$(OutDir)$(ProjectName).MyResource.es-ES.resources" /version:1.0.0.0 /culture:es-ES /out:"$(OutDir)es-ES\$(ProjectName).resources.dll"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
+using Digi21.DigiNG.Plugin;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasLíneasName")]
     public class BuscarTodasLasLíneas : ISearcher
     {
-        public Form Form
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public Form Form => throw new NotImplementedException();
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {

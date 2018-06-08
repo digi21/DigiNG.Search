@@ -1,31 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
-using Digi21.Utilities;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
-    // He hecho la clase internal para que no aparezca
     [LocalizableSearcher(typeof(MyResource), "BuscarLíneasConNúmeroImparDeVérticesName")]
     internal class BuscarLíneasConNúmeroImparDeVértices : ISearcher
     {
-        public System.Windows.Forms.Form Form
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public System.Windows.Forms.Form Form => throw new NotImplementedException();
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            List<Entity> listaEntidades = new List<Entity>(entities);
-            List<Entity> entidadesSeleccionadas = new List<Entity>();
+            var listaEntidades = new List<Entity>(entities);
+            var entidadesSeleccionadas = new List<Entity>();
 
-            for (int i = 0; i < listaEntidades.Count; i++)
+            foreach (var entidad in listaEntidades)
             {
-                ReadOnlyLine línea = listaEntidades[i] as ReadOnlyLine;
-                if (línea == null)
+                if (!(entidad is ReadOnlyLine línea))
                     continue;
 
                 if (línea.Points.Count % 2 == 1)
@@ -33,9 +26,6 @@ namespace Buscadores
             }
 
             return entidadesSeleccionadas;
-            //return from línea in entities.SoloLíneas()
-            //       where línea.Points.Count % 2 == 1
-            //       select línea;
         }
     }
 }

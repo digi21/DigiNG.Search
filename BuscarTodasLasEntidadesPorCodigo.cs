@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
 using Digi21.Utilities;
+using Digi21Search;
 
-namespace Buscadores
+namespace Digi21.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasEntidadesPorCodigoName")]
     public class BuscarTodasLasEntidadesPorCodigo : ISearcher
     {
-        FormularioPideCódigo form = new FormularioPideCódigo();
+        private readonly FormularioPideCódigo form = new FormularioPideCódigo();
+        public Form Form => form;
 
-        public Form Form
-        {
-            get { return form; }
-        }
-
-        public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
-        {
-            return entities.QueTenganElCódigoConComodín(form.Código);
-        }
+        public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.QueTenganElCódigoConComodín(form.Código);
     }
 }
