@@ -4,9 +4,8 @@ using System.Linq;
 using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.Plugin;
-using Digi21Search;
 
-namespace Digi21.Search
+namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTodosLosPuntosName")]
     public class BuscarTodosLosPuntos : ISearcher

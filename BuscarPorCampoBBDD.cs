@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.Plugin;
-using System.Windows.Forms;
 using Digi21.Utilities;
-using Digi21Search;
 
-namespace Digi21.Search
+namespace DigiNG.Search
 {
     [Searcher(Title = "Buscar por atributos de BBDD")]
     public class BuscarPorCampoBBDD : ISearcher

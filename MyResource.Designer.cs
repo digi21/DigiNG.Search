@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Digi21Search {
+namespace DigiNG.Search {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Digi21Search {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Digi21Search.MyResource", typeof(MyResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DigiNG.Search.MyResource", typeof(MyResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

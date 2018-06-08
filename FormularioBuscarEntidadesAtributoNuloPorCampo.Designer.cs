@@ -1,4 +1,4 @@
-﻿namespace Digi21Search
+﻿namespace DigiNG.Search
 {
     partial class FormularioBuscarEntidadesAtributoNuloPorCampo
     {

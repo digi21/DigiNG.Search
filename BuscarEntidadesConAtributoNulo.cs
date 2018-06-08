@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
-using Digi21Search;
+using Digi21.DigiNG.Plugin;
 
-namespace Digi21.Search
+namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarEntidadesConAtributoNuloName")]
     public class BuscarEntidadesConAtributoNulo : ISearcher

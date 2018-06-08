@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.Plugin;
-using Digi21Search;
 
-namespace Digi21.Search
+namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTodosLosComplejosName")]
     public class BuscarTodosLosComplejos : ISearcher

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Digi21.DigiNG;
 
-namespace Digi21Search
+namespace DigiNG.Search
 {
     public partial class FormularioBuscarLíneasQueCruzanConOtrasLíneas : Form
     {
@@ -16,7 +14,7 @@ namespace Digi21Search
 
         private void botónBuscarCódigosPrincipales_Click(object sender, EventArgs e)
         {
-            var códigos = DigiNG.Codes.DlgSelectCodes("Selecciona el código o códigos de las líneas principales", true);
+            var códigos = Digi21.DigiNG.DigiNG.Codes.DlgSelectCodes("Selecciona el código o códigos de las líneas principales", true);
 
             if (0 == códigos.Length)
                 return;
@@ -28,7 +26,7 @@ namespace Digi21Search
 
         private void botónBuscarCódigosSecundarios_Click(object sender, EventArgs e)
         {
-            var códigos = DigiNG.Codes.DlgSelectCodes("Selecciona el código o códigos de las líneas secundarias", true);
+            var códigos = Digi21.DigiNG.DigiNG.Codes.DlgSelectCodes("Selecciona el código o códigos de las líneas secundarias", true);
 
             if (0 == códigos.Length)
                 return;

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Digi21.Search")]
+[assembly: AssemblyTitle("DigiNG.Search")]
 [assembly: AssemblyDescription("Implementa herramientas de búsqueda para Digi3D.NET")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dreaming With Objects S.L.")]

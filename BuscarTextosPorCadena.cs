@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Digi21.DigiNG.Plugin;
 using Digi21.DigiNG.Entities;
-using Digi21Search;
+using Digi21.DigiNG.Plugin;
 
-namespace Digi21.Search
+namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCadenaName")]
     public class BuscarTextosPorCadena : ISearcher
