@@ -22,7 +22,7 @@ namespace DigiNG.Search {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MyResource {
+    public class MyResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DigiNG.Search {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DigiNG.Search.MyResource", typeof(MyResource).Assembly);
@@ -51,7 +51,7 @@ namespace DigiNG.Search {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Complex by code.
         /// </summary>
-        internal static string BuscarComplejosPorCódigoName {
+        public static string BuscarComplejosPorCódigoName {
             get {
                 return ResourceManager.GetString("BuscarComplejosPorCódigoName", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Entities with null attribute .
         /// </summary>
-        internal static string BuscarEntidadesConAtributoNuloName {
+        public static string BuscarEntidadesConAtributoNuloName {
             get {
                 return ResourceManager.GetString("BuscarEntidadesConAtributoNuloName", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Entities with null attribute by field.
         /// </summary>
-        internal static string BuscarEntidadesConAtributoNuloPorCampoName {
+        public static string BuscarEntidadesConAtributoNuloPorCampoName {
             get {
                 return ResourceManager.GetString("BuscarEntidadesConAtributoNuloPorCampoName", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Lines with an odd number of vertex.
         /// </summary>
-        internal static string BuscarLíneasConNúmeroImparDeVérticesName {
+        public static string BuscarLíneasConNúmeroImparDeVérticesName {
             get {
                 return ResourceManager.GetString("BuscarLíneasConNúmeroImparDeVérticesName", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Lines crossing other lines.
         /// </summary>
-        internal static string BuscarLineasCruzanConLineasName {
+        public static string BuscarLineasCruzanConLineasName {
             get {
                 return ResourceManager.GetString("BuscarLineasCruzanConLineasName", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All lines by criteria.
         /// </summary>
-        internal static string BuscarLíneasPorCriterioName {
+        public static string BuscarLíneasPorCriterioName {
             get {
                 return ResourceManager.GetString("BuscarLíneasPorCriterioName", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Poligons by code.
         /// </summary>
-        internal static string BuscarPolígonosPorCódigoName {
+        public static string BuscarPolígonosPorCódigoName {
             get {
                 return ResourceManager.GetString("BuscarPolígonosPorCódigoName", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Points by code.
         /// </summary>
-        internal static string BuscarPuntosPorCódigoName {
+        public static string BuscarPuntosPorCódigoName {
             get {
                 return ResourceManager.GetString("BuscarPuntosPorCódigoName", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Text by string.
         /// </summary>
-        internal static string BuscarTextosPorCadenaName {
+        public static string BuscarTextosPorCadenaName {
             get {
                 return ResourceManager.GetString("BuscarTextosPorCadenaName", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Text by code.
         /// </summary>
-        internal static string BuscarTextosPorCódigoName {
+        public static string BuscarTextosPorCódigoName {
             get {
                 return ResourceManager.GetString("BuscarTextosPorCódigoName", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to Text by code and string.
         /// </summary>
-        internal static string BuscarTextosPorCódigoYCadenaName {
+        public static string BuscarTextosPorCódigoYCadenaName {
             get {
                 return ResourceManager.GetString("BuscarTextosPorCódigoYCadenaName", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All entities.
         /// </summary>
-        internal static string BuscarTodasLasEntidadesName {
+        public static string BuscarTodasLasEntidadesName {
             get {
                 return ResourceManager.GetString("BuscarTodasLasEntidadesName", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All entities by code.
         /// </summary>
-        internal static string BuscarTodasLasEntidadesPorCodigoName {
+        public static string BuscarTodasLasEntidadesPorCodigoName {
             get {
                 return ResourceManager.GetString("BuscarTodasLasEntidadesPorCodigoName", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All lines.
         /// </summary>
-        internal static string BuscarTodasLasLíneasName {
+        public static string BuscarTodasLasLíneasName {
             get {
                 return ResourceManager.GetString("BuscarTodasLasLíneasName", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All complex.
         /// </summary>
-        internal static string BuscarTodosLosComplejosName {
+        public static string BuscarTodosLosComplejosName {
             get {
                 return ResourceManager.GetString("BuscarTodosLosComplejosName", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All polygons.
         /// </summary>
-        internal static string BuscarTodosLosPolígonosName {
+        public static string BuscarTodosLosPolígonosName {
             get {
                 return ResourceManager.GetString("BuscarTodosLosPolígonosName", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All points.
         /// </summary>
-        internal static string BuscarTodosLosPuntosName {
+        public static string BuscarTodosLosPuntosName {
             get {
                 return ResourceManager.GetString("BuscarTodosLosPuntosName", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace DigiNG.Search {
         /// <summary>
         ///   Looks up a localized string similar to All texts.
         /// </summary>
-        internal static string BuscarTodosLosTextosName {
+        public static string BuscarTodosLosTextosName {
             get {
                 return ResourceManager.GetString("BuscarTodosLosTextosName", resourceCulture);
             }

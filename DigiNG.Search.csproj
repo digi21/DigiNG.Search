@@ -75,6 +75,7 @@
     </Reference>
     <Reference Include="Digi21.Utilities, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
       <HintPath>packages\Digi21.Utilities.x64.17.0.0\lib\net46\Digi21.Utilities.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -213,14 +214,16 @@
     <EmbeddedResource Include="FormularioPideCódigoYCadena.resx">
       <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="MyResource.es.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+    <EmbeddedResource Include="MyResource.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MyResource.es.Designer.cs</LastGenOutput>
-    </None>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MyResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
