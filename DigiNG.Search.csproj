@@ -215,11 +215,11 @@
       <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyResource.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MyResource.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MyResource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MyResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
