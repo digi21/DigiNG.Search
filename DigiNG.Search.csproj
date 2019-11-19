@@ -61,22 +61,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Digi21.DigiNG, Version=17.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
-      <HintPath>packages\Digi21.DigiNG.x64.17.0.0\lib\net46\Digi21.DigiNG.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Digi21.DigiNG.Plugin, Version=17.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
-      <HintPath>packages\Digi21.DigiNG.Plugin.x64.17.0.0\lib\net46\Digi21.DigiNG.Plugin.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Digi21.DigiNG.Topology, Version=17.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
-      <HintPath>packages\Digi21.DigiNG.Topology.x64.17.0.0\lib\net46\Digi21.DigiNG.Topology.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Digi21.Utilities, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c, processorArchitecture=AMD64">
-      <HintPath>packages\Digi21.Utilities.x64.17.0.0\lib\net46\Digi21.Utilities.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -224,7 +208,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="Digi21.DigiNG">
+      <Version>17.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Digi21.DigiNG.Plugin">
+      <Version>17.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Digi21.DigiNG.Topology">
+      <Version>17.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Digi21.Utilities">
+      <Version>17.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
