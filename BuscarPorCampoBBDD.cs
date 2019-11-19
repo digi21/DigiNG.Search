@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
-using Digi21.DigiNG.Plugin;
+using Digi21.DigiNG.Plugin.Search;
 using Digi21.Utilities;
 
 namespace DigiNG.Search
@@ -24,7 +24,7 @@ namespace DigiNG.Search
             var candidatos = from entidad in entities
                              let códigosComunes = entidad.CódigosComunes(códigos).ToList()
                              where códigosComunes.Count > 0
-                             let atributos = Digi21.DigiNG.DigiNG.DrawingFile.get_DatabaseAttributes(entidad)
+                             let atributos = Digi21.DigiNG.DigiNG.DrawingFile.GetDatabaseAttributes(entidad)
                              where atributos != null
                              where atributos.ContainsKey(códigosComunes[0])
                              let atributosCódigo = atributos[códigosComunes[0]]

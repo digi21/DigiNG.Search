@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Digi21.DigiNG.Entities;
-using Digi21.DigiNG.Plugin;
+using Digi21.DigiNG.Plugin.Search;
 
 namespace DigiNG.Search
 {
@@ -18,7 +18,7 @@ namespace DigiNG.Search
             var localizados = new List<Entity>();
             foreach (var entidad in entities)
             {
-                var atributos = Digi21.DigiNG.DigiNG.DrawingFile.get_DatabaseAttributes(entidad);
+                var atributos = Digi21.DigiNG.DigiNG.DrawingFile.GetDatabaseAttributes(entidad);
 
                 foreach(var código in atributos.Keys)
                 {

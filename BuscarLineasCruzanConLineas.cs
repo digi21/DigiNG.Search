@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Digi21.DigiNG.Entities;
-using Digi21.DigiNG.Plugin;
+using Digi21.DigiNG.Plugin.Search;
 using Digi21.DigiNG.Topology;
 using Digi21.Utilities;
 

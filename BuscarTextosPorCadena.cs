@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
-using Digi21.DigiNG.Plugin;
+using Digi21.DigiNG.Plugin.Search;
 
 namespace DigiNG.Search
 {

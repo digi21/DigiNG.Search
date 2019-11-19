@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Digi21.DigiNG.Entities;
-using Digi21.DigiNG.Plugin;
+using Digi21.DigiNG.Plugin.Search;
 
 namespace DigiNG.Search
 {
