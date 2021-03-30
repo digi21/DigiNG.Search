@@ -10,12 +10,12 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCódigoName")]
     public class BuscarTextosPorCódigo : ISearcher
     {
-        private readonly FormularioPideCódigo form = new FormularioPideCódigo();
-        public Form Form => form;
+        private readonly FormularioPideCódigo _form = new FormularioPideCódigo();
+        public Form Form => _form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            return entities.OfType<ReadOnlyText>().QueTenganElCódigoConComodín(form.Código);
+            return entities.OfType<ReadOnlyText>().QueTenganElCódigoConComodín(_form.Código);
         }
     }
 }

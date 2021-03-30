@@ -13,7 +13,7 @@ namespace DigiNG.Search
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            List<Entity> localizados = new List<Entity>();
+            var localizados = new List<Entity>();
             foreach (var entidad in entities)
             {
                 var atributos = Digi21.DigiNG.DigiNG.DrawingFile.GetDatabaseAttributes(entidad);

@@ -9,36 +9,12 @@ namespace DigiNG.Search
             InitializeComponent();
         }
 
-        public string Código
-        {
-            get
-            {
-                return código.Text;
-            }
-        }
+        public string Código => código.Text;
 
-        public string CadenaBuscar
-        {
-            get
-            {
-                return cadenaBuscar.Text;
-            }
-        }
+        public string CadenaBuscar => cadenaBuscar.Text;
 
-        public bool CoincidirMayúsculasMinúsculas
-        {
-            get
-            {
-                return coincidirMayúsculasMinúsculas.Checked;
-            }
-        }
+        public bool CoincidirMayúsculasMinúsculas => coincidirMayúsculasMinúsculas.Checked;
 
-        public bool SóloPalabrasCompletas
-        {
-            get
-            {
-                return sóloPalabrasCompletas.Checked;
-            }
-        }
+        public bool SóloPalabrasCompletas => sóloPalabrasCompletas.Checked;
     }
 }

@@ -11,45 +11,15 @@ namespace DigiNG.Search
             InitializeComponent();
         }
 
-        public string Tabla
-        {
-            get
-            {
-                return comboTablas.Text;
-            }
-        }
+        public string Tabla => comboTablas.Text;
 
-        public string Campo
-        {
-            get
-            {
-                return comboCampos.Text;
-            }
-        }
+        public string Campo => comboCampos.Text;
 
-        public string CadenaBuscar
-        {
-            get
-            {
-                return cadenaBuscar.Text;
-            }
-        }
+        public string CadenaBuscar => cadenaBuscar.Text;
 
-        public bool CoincidirMayúsculasMinúsculas
-        {
-            get
-            {
-                return coincidirMayúsculasMinúsculas.Checked;
-            }
-        }
+        public bool CoincidirMayúsculasMinúsculas => coincidirMayúsculasMinúsculas.Checked;
 
-        public bool SóloPalabrasCompletas
-        {
-            get
-            {
-                return sóloPalabrasCompletas.Checked;
-            }
-        }
+        public bool SóloPalabrasCompletas => sóloPalabrasCompletas.Checked;
 
         private void botónRefrescar_Click(object sender, EventArgs e)
         {

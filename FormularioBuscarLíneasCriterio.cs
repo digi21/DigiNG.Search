@@ -9,20 +9,8 @@ namespace DigiNG.Search
             InitializeComponent();
         }
 
-        public string Código
-        {
-            get
-            {
-                return código.Text;
-            }
-        }
+        public string Código => código.Text;
 
-        public bool QueEsténCerradas
-        {
-            get
-            {
-                return queEsténCerradas.Checked;
-            }
-        }
+        public bool QueEsténCerradas => queEsténCerradas.Checked;
     }
 }

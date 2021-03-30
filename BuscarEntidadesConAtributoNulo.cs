@@ -8,12 +8,12 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarEntidadesConAtributoNuloName")]
     public class BuscarEntidadesConAtributoNulo : ISearcher
     {
-        private readonly FormularioBuscarEntidadesAtributoNulo formulario = new FormularioBuscarEntidadesAtributoNulo();
-        public System.Windows.Forms.Form Form => formulario;
+        private readonly FormularioBuscarEntidadesAtributoNulo _formulario = new FormularioBuscarEntidadesAtributoNulo();
+        public System.Windows.Forms.Form Form => _formulario;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            var camposAExcluir = formulario.CamposExcluir;
+            var camposAExcluir = _formulario.CamposExcluir;
 
             var localizados = new List<Entity>();
             foreach (var entidad in entities)

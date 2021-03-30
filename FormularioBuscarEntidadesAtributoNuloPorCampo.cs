@@ -9,14 +9,6 @@ namespace DigiNG.Search
             InitializeComponent();
         }
 
-
-        public string Campo
-        {
-            get
-            {
-                return campo.Text;
-            }
-        }
-
+        public string Campo => campo.Text;
     }
 }

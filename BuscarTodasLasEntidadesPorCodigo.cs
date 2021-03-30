@@ -9,9 +9,9 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasEntidadesPorCodigoName")]
     public class BuscarTodasLasEntidadesPorCodigo : ISearcher
     {
-        private readonly FormularioPideCódigo form = new FormularioPideCódigo();
-        public Form Form => form;
+        private readonly FormularioPideCódigo _form = new FormularioPideCódigo();
+        public Form Form => _form;
 
-        public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.QueTenganElCódigoConComodín(form.Código);
+        public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.QueTenganElCódigoConComodín(_form.Código);
     }
 }

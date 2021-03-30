@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
@@ -9,28 +10,28 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCadenaName")]
     public class BuscarTextosPorCadena : ISearcher
     {
-        private readonly FormularioPideCadena form = new FormularioPideCadena();
-        public Form Form => form;
+        private readonly FormularioPideCadena _form = new FormularioPideCadena();
+        public Form Form => _form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
-            if( form.CoincidirMayúsculasMinúsculas && form.SóloPalabrasCompletas )
-                return from texto in entities.OfType<ReadOnlyText>().OfType<ReadOnlyText>()
-                       where texto.Txt == form.CadenaBuscar
+            if( _form.CoincidirMayúsculasMinúsculas && _form.SóloPalabrasCompletas )
+                return from texto in entities.OfType<ReadOnlyText>()
+                       where texto.Txt == _form.CadenaBuscar
                         select texto;
 
-            if( form.CoincidirMayúsculasMinúsculas )
+            if( _form.CoincidirMayúsculasMinúsculas )
                 return from texto in entities.OfType<ReadOnlyText>()
-                       where texto.Txt.Contains(form.CadenaBuscar)
+                       where texto.Txt.Contains(_form.CadenaBuscar)
                        select texto;
 
-            if( form.SóloPalabrasCompletas )
+            if( _form.SóloPalabrasCompletas )
                 return from texto in entities.OfType<ReadOnlyText>()
-                       where texto.Txt.ToUpper() == form.CadenaBuscar.ToUpper()
+                       where string.Equals(texto.Txt, _form.CadenaBuscar, StringComparison.CurrentCultureIgnoreCase)
                        select texto;
 
             return from texto in entities.OfType<ReadOnlyText>()
-                   where texto.Txt.ToUpper().Contains(form.CadenaBuscar.ToUpper())
+                   where texto.Txt.ToUpper().Contains(_form.CadenaBuscar.ToUpper())
                    select texto;
         }
     }

@@ -10,9 +10,9 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarPolígonosPorCódigoName")]
     public class BuscarPolígonosPorCódigo : ISearcher
     {
-        private readonly FormularioPideCódigo form = new FormularioPideCódigo();
-        public Form Form => form;
+        private readonly FormularioPideCódigo _form = new FormularioPideCódigo();
+        public Form Form => _form;
 
-        public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.OfType<ReadOnlyPolygon>().QueTenganElCódigoConComodín(form.Código);
+        public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.OfType<ReadOnlyPolygon>().QueTenganElCódigoConComodín(_form.Código);
     }
 }
