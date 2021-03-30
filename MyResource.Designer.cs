@@ -221,5 +221,32 @@ namespace DigiNG.Search {
                 return ResourceManager.GetString("BuscarTodosLosTextosName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \r\n.
+        /// </summary>
+        internal static string SaltoLinea {
+            get {
+                return ResourceManager.GetString("SaltoLinea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the code(s) of the main line(s).
+        /// </summary>
+        internal static string SeleccionaCodigoLineasPrincipales {
+            get {
+                return ResourceManager.GetString("SeleccionaCodigoLineasPrincipales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selects the code(s) of the child lines.
+        /// </summary>
+        internal static string SeleccionaCodigoLineasSecundarias {
+            get {
+                return ResourceManager.GetString("SeleccionaCodigoLineasSecundarias", resourceCulture);
+            }
+        }
     }
 }

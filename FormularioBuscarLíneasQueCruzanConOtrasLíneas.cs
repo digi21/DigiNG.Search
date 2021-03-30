@@ -14,34 +14,34 @@ namespace DigiNG.Search
 
         private void botónBuscarCódigosPrincipales_Click(object sender, EventArgs e)
         {
-            var códigos = Digi21.DigiNG.DigiNG.Codes.DlgSelectCodes("Selecciona el código o códigos de las líneas principales", true);
+            var códigos = Digi21.DigiNG.DigiNG.Codes.DlgSelectCodes(MyResource.SeleccionaCodigoLineasPrincipales, true);
 
             if (0 == códigos.Length)
                 return;
 
-            códigosLíneasPrincipales.Text = "";
+            códigosLíneasPrincipales.Text = string.Empty;
             foreach (var código in códigos)
-                códigosLíneasPrincipales.Text += código.Name + "\r\n";
+                códigosLíneasPrincipales.Text += código.Name + MyResource.SaltoLinea;
         }
 
         private void botónBuscarCódigosSecundarios_Click(object sender, EventArgs e)
         {
-            var códigos = Digi21.DigiNG.DigiNG.Codes.DlgSelectCodes("Selecciona el código o códigos de las líneas secundarias", true);
+            var códigos = Digi21.DigiNG.DigiNG.Codes.DlgSelectCodes(MyResource.SeleccionaCodigoLineasSecundarias, true);
 
             if (0 == códigos.Length)
                 return;
 
             códigosLíneasSecundarias.Text = "";
             foreach (var código in códigos)
-                códigosLíneasSecundarias.Text += código.Name + "\r\n";
+                códigosLíneasSecundarias.Text += código.Name + MyResource.SaltoLinea;
         }
 
         public IEnumerable<string> CódigosPrincipales
         {
             get
             {
-                List<string> códigos = new List<string>();
-                códigos.AddRange(códigosLíneasPrincipales.Text.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries).Where(código => código.Length > 0));
+                var códigos = new List<string>();
+                códigos.AddRange(códigosLíneasPrincipales.Text.Split(new[] { MyResource.SaltoLinea }, StringSplitOptions.RemoveEmptyEntries).Where(código => código.Length > 0));
                 return códigos;
             }
         }
@@ -49,8 +49,8 @@ namespace DigiNG.Search
         public IEnumerable<string> CódigosSecundarios
         {
             get {
-                List<string> códigos = new List<string>();
-                códigos.AddRange(códigosLíneasSecundarias.Text.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries).Where(código => código.Length > 0));
+                var códigos = new List<string>();
+                códigos.AddRange(códigosLíneasSecundarias.Text.Split(new[] { MyResource.SaltoLinea }, StringSplitOptions.RemoveEmptyEntries).Where(código => código.Length > 0));
                 return códigos;
             }
         }
@@ -59,8 +59,8 @@ namespace DigiNG.Search
         {
             get
             {
-                List<string> códigosPrincipales = new List<string>(this.CódigosPrincipales);
-                List<string> todosLosCódigos = new List<string>();
+                var códigosPrincipales = new List<string>(this.CódigosPrincipales);
+                var todosLosCódigos = new List<string>();
                 todosLosCódigos.AddRange(códigosPrincipales);
                 todosLosCódigos.AddRange(this.CódigosSecundarios);
 

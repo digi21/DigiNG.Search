@@ -171,4 +171,13 @@
   <data name="BuscarTodosLosTextosName" xml:space="preserve">
     <value>All texts</value>
   </data>
+  <data name="SaltoLinea" xml:space="preserve">
+    <value>\r\n</value>
+  </data>
+  <data name="SeleccionaCodigoLineasPrincipales" xml:space="preserve">
+    <value>Select the code(s) of the main line(s)</value>
+  </data>
+  <data name="SeleccionaCodigoLineasSecundarias" xml:space="preserve">
+    <value>Selects the code(s) of the child lines</value>
+  </data>
 </root>
