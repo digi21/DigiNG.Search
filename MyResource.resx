@@ -126,6 +126,9 @@
   <data name="BuscarEntidadesConAtributoNuloPorCampoName" xml:space="preserve">
     <value>Entities with null attribute by field</value>
   </data>
+  <data name="BuscarExpresionPython" xml:space="preserve">
+    <value>Search by Python expression</value>
+  </data>
   <data name="BuscarLineasCruzanConLineasName" xml:space="preserve">
     <value>Lines crossing other lines</value>
   </data>

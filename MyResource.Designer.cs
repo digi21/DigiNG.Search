@@ -88,6 +88,15 @@ namespace DigiNG.Search {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search by Python expression.
+        /// </summary>
+        internal static string BuscarExpresionPython {
+            get {
+                return ResourceManager.GetString("BuscarExpresionPython", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lines with an odd number of vertex.
         /// </summary>
         internal static string BuscarLíneasConNúmeroImparDeVérticesName {
