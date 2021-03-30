@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DigiNG.Search.ExtensionMethods;
 
 namespace DigiNG.Search
 {
@@ -8,6 +9,8 @@ namespace DigiNG.Search
         public FormularioBuscarEntidadesAtributoNulo()
         {
             InitializeComponent();
+            Activated += (_, e) => this.AdaptTheme();
+
             camposExcluir.Text = "ACC\r\nTXT\r\nUID\r\nSDV\r\nSDP\r\nSRT\r\nCCN\r\nFCODE\r\nId";
         }
 

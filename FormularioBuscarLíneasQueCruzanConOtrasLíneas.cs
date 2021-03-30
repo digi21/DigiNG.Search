@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DigiNG.Search.ExtensionMethods;
 
 namespace DigiNG.Search
 {
@@ -10,6 +11,7 @@ namespace DigiNG.Search
         public FormularioBuscarLíneasQueCruzanConOtrasLíneas()
         {
             InitializeComponent();
+            Activated += (_, e) => this.AdaptTheme();
         }
 
         private void botónBuscarCódigosPrincipales_Click(object sender, EventArgs e)

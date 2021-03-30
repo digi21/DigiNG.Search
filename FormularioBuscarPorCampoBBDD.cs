@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using DigiNG.Search.ExtensionMethods;
 
 namespace DigiNG.Search
 {
@@ -9,6 +10,7 @@ namespace DigiNG.Search
         public FormularioBuscarPorCampoBBDD()
         {
             InitializeComponent();
+            Activated += (_, e) => this.AdaptTheme();
         }
 
         public string Tabla => comboTablas.Text;

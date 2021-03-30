@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using DigiNG.Search.ExtensionMethods;
 
 namespace DigiNG.Search
 {
@@ -7,6 +8,8 @@ namespace DigiNG.Search
         public FormularioPideCódigo()
         {
             InitializeComponent();
+
+            Activated += (_, e) => this.AdaptTheme();
         }
 
         public string Código => código.Text;
