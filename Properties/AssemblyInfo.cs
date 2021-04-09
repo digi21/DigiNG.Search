@@ -1,6 +1,5 @@
 ﻿using System.Resources;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // La información general sobre un ensamblado se controla mediante el siguiente 
@@ -11,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dreaming With Objects S.L.")]
 [assembly: AssemblyProduct("Digi21.Search")]
-[assembly: AssemblyCopyright("Copyright © 2010-2018 Dreaming With Objects S.L.")]
+[assembly: AssemblyCopyright("Copyright © 2010-2021 Dreaming With Objects S.L.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,7 +32,7 @@ using System.Runtime.InteropServices;
 // Puede especificar todos los valores o establecer como predeterminados los números de versión de compilación y de revisión 
 // mediante el asterisco ('*'), como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2017.0.1.0")]
-[assembly: AssemblyFileVersion("2017.0.1.0")]
+[assembly: AssemblyVersion("21.0.0.0")]
+[assembly: AssemblyFileVersion("21.0.0.0")]
 [assembly: NeutralResourcesLanguage("en-US")]
 
