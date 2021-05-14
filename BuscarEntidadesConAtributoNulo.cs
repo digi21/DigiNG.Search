@@ -18,14 +18,14 @@ namespace DigiNG.Search
             var localizados = new List<Entity>();
             foreach (var entidad in entities)
             {
-                var atributos = Digi21.DigiNG.DigiNG.DrawingFile.GetDatabaseAttributes(entidad);
-
-                foreach(var código in atributos.Keys)
+                foreach (var code in entidad.Codes)
                 {
-                    if (atributos[código].Any(atributo => !camposAExcluir.Contains(atributo.Key) && atributo.Value == null))
+                    if (code.Attributes.Any(atributo => !camposAExcluir.Contains(atributo.Key) && atributo.Value == null))
+                    {
                         localizados.Add(entidad);
+                        break;
+                    }
                 }
-                    
             }
 
             return localizados;
