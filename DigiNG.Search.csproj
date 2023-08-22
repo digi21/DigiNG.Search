@@ -1,226 +1,40 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA29F2E1-2392-4EE1-B563-28E844C41738}</ProjectGuid>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DigiNG.Search</RootNamespace>
-    <AssemblyName>DigiNG.Search</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\Digi3D.NET\bin\v143\Debug\x64\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\Digi21.Utilities\Digi21.Utilities\Digi21.Utilities.csproj" />
+    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj" />
+    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Topology\Digi21.DigiNG.Topology.vcxproj" />
+    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscarComplejosPorCódigo.cs" />
-    <Compile Include="BuscarEntidadesConAtributoNulo.cs" />
-    <Compile Include="BuscarEntidadesConAtributoNuloPorCampo.cs" />
-    <Compile Include="BuscarLineasCruzanConLineas.cs" />
-    <Compile Include="BuscarLíneasConNúmeroImparDeVértices.cs" />
-    <Compile Include="BuscarLíneasPorCriterio.cs" />
-    <Compile Include="BuscarPolígonosPorCódigo.cs" />
-    <Compile Include="BuscarPorExpresionPython.cs" />
-    <Compile Include="BuscarPuntosPorCódigo.cs" />
-    <Compile Include="BuscarTextosPorCadena.cs" />
-    <Compile Include="BuscarTextosPorCódigo.cs" />
-    <Compile Include="BuscarTextosPorCódigoYCadena.cs" />
-    <Compile Include="BuscarTodasLasEntidades.cs" />
-    <Compile Include="BuscarTodasLasEntidadesPorCodigo.cs" />
-    <Compile Include="BuscarTodasLasLíneas.cs" />
-    <Compile Include="BuscarTodosLosComplejos.cs" />
-    <Compile Include="BuscarTodosLosPolígonos.cs" />
-    <Compile Include="BuscarTodosLosPuntos.cs" />
-    <Compile Include="BuscarTodosLosTextos.cs" />
-    <Compile Include="ExtensionMethods\ExtensionMethods.cs" />
-    <Compile Include="FormularioBuscarEntidadesAtributoNulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioBuscarEntidadesAtributoNulo.Designer.cs">
-      <DependentUpon>FormularioBuscarEntidadesAtributoNulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioBuscarEntidadesAtributoNuloPorCampo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioBuscarEntidadesAtributoNuloPorCampo.Designer.cs">
-      <DependentUpon>FormularioBuscarEntidadesAtributoNuloPorCampo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioBuscarLíneasCriterio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioBuscarLíneasCriterio.Designer.cs">
-      <DependentUpon>FormularioBuscarLíneasCriterio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioBuscarLíneasQueCruzanConOtrasLíneas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioBuscarLíneasQueCruzanConOtrasLíneas.Designer.cs">
-      <DependentUpon>FormularioBuscarLíneasQueCruzanConOtrasLíneas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioBuscarPorCampoBBDD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioBuscarPorCampoBBDD.Designer.cs">
-      <DependentUpon>FormularioBuscarPorCampoBBDD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioExpresionPython.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioExpresionPython.Designer.cs">
-      <DependentUpon>FormularioExpresionPython.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioPideCadena.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioPideCadena.Designer.cs">
-      <DependentUpon>FormularioPideCadena.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioPideCódigo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioPideCódigo.Designer.cs">
-      <DependentUpon>FormularioPideCódigo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioPideCódigoYCadena.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioPideCódigoYCadena.Designer.cs">
-      <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MyResource.es-ES.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyResource.es-ES.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyResource.resx</DependentUpon>
-    </Compile>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNulo.es.resx">
-      <DependentUpon>FormularioBuscarEntidadesAtributoNulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNulo.resx">
-      <DependentUpon>FormularioBuscarEntidadesAtributoNulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNuloPorCampo.es.resx">
-      <DependentUpon>FormularioBuscarEntidadesAtributoNuloPorCampo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarEntidadesAtributoNuloPorCampo.resx">
-      <DependentUpon>FormularioBuscarEntidadesAtributoNuloPorCampo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarLíneasCriterio.es.resx">
-      <DependentUpon>FormularioBuscarLíneasCriterio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarLíneasCriterio.resx">
-      <DependentUpon>FormularioBuscarLíneasCriterio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarLíneasQueCruzanConOtrasLíneas.es.resx">
-      <DependentUpon>FormularioBuscarLíneasQueCruzanConOtrasLíneas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarLíneasQueCruzanConOtrasLíneas.resx">
-      <DependentUpon>FormularioBuscarLíneasQueCruzanConOtrasLíneas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBuscarPorCampoBBDD.resx">
-      <DependentUpon>FormularioBuscarPorCampoBBDD.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioExpresionPython.resx">
-      <DependentUpon>FormularioExpresionPython.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPideCadena.es.resx">
-      <DependentUpon>FormularioPideCadena.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPideCadena.resx">
-      <DependentUpon>FormularioPideCadena.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPideCódigo.es.resx">
-      <DependentUpon>FormularioPideCódigo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPideCódigo.resx">
-      <DependentUpon>FormularioPideCódigo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPideCódigoYCadena.es.resx">
-      <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPideCódigoYCadena.resx">
-      <DependentUpon>FormularioPideCódigoYCadena.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyResource.es-ES.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MyResource.es-ES.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MyResource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Digi21.Utilities\Digi21.Utilities\Digi21.Utilities.csproj">
-      <Project>{9f541c36-746d-4e06-899d-48332256d181}</Project>
-      <Name>Digi21.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj">
-      <Project>{897f6a51-df51-4ac6-7411-6083824a5985}</Project>
-      <Name>Digi21.DigiNG.Plugin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Topology\Digi21.DigiNG.Topology.vcxproj">
-      <Project>{0b03bd59-e4c8-a850-469b-61889767797c}</Project>
-      <Name>Digi21.DigiNG.Topology</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj">
-      <Project>{efd60fa9-0e03-e1c7-babd-4cb3223002e5}</Project>
-      <Name>Digi21.DigiNG</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <AssemblyTitle>DigiNG.Search</AssemblyTitle>
+    <Description>Implementa herramientas de búsqueda para Digi3D.NET</Description>
+    <Company>Dreaming With Objects S.L.</Company>
+    <Product>Digi21.Search</Product>
+    <Copyright>Copyright © 2010-2022 Dreaming With Objects S.L.</Copyright>
+    <AssemblyVersion>22.3.0.0</AssemblyVersion>
+    <FileVersion>22.3.0.0</FileVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
