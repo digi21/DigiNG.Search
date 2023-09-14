@@ -9,7 +9,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarTodosLosComplejosName")]
     public class BuscarTodosLosComplejos : ISearcher
     {
-        public System.Windows.Forms.Form Form => throw new NotImplementedException();
+        public System.Windows.Forms.Form Form => null;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.OfType<ReadOnlyComplex>();
     }

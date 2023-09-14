@@ -10,7 +10,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarTodasLasLíneasName")]
     public class BuscarTodasLasLíneas : ISearcher
     {
-        public Form Form => throw new NotImplementedException();
+        public Form Form => null;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
         {
