@@ -22,15 +22,11 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Digi21.DigiNG.Topology" Version="24.0.0" />
+    <PackageReference Include="Digi21.Utilities" Version="24.0.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Digi21.Utilities\Digi21.Utilities\Digi21.Utilities.csproj" />
-    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj" />
-    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Topology\Digi21.DigiNG.Topology.vcxproj" />
-    <ProjectReference Include="..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj" />
   </ItemGroup>
   <PropertyGroup>
     <AssemblyTitle>DigiNG.Search</AssemblyTitle>
