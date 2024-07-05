@@ -11,7 +11,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCódigoName")]
     public class BuscarTextosPorCódigo : ISearcher, IDisposable
     {
-        private readonly FormularioPideCódigo _form = new FormularioPideCódigo();
+        private readonly FormularioPideCódigo _form = new();
         public Form Form => _form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)

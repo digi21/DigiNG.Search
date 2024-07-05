@@ -11,7 +11,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarPuntosPorCódigoName")]
     public class BuscarPuntosPorCódigo : ISearcher, IDisposable
     {
-        private readonly FormularioPideCódigo form = new FormularioPideCódigo();
+        private readonly FormularioPideCódigo form = new();
         public Form Form => form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities) => entities.OfType<ReadOnlyPoint>().QueTenganElCódigoConComodín(form.Código);

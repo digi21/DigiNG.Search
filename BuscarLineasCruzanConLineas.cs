@@ -11,7 +11,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarLineasCruzanConLineasName")]
     public class BuscarLineasCruzanConLineas : ISearcher, IDisposable
     {
-        private readonly FormularioBuscarLíneasQueCruzanConOtrasLíneas formulario = new FormularioBuscarLíneasQueCruzanConOtrasLíneas();
+        private readonly FormularioBuscarLíneasQueCruzanConOtrasLíneas formulario = new();
         public System.Windows.Forms.Form Form => formulario;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)

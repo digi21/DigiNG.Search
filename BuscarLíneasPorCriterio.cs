@@ -11,7 +11,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarLíneasPorCriterioName")]
     public class BuscarLíneasPorCriterio : ISearcher, IDisposable
     {
-        private readonly FormularioBuscarLíneasCriterio form = new FormularioBuscarLíneasCriterio();
+        private readonly FormularioBuscarLíneasCriterio form = new();
         public Form Form => form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)

@@ -9,7 +9,7 @@ namespace DigiNG.Search
     [LocalizableSearcher(typeof(MyResource), "BuscarExpresionPython")]
     public class BuscarPorExpresionPython : ISearcher, IDisposable
     {
-        private readonly FormularioExpresionPython _form = new FormularioExpresionPython();
+        private readonly FormularioExpresionPython _form = new();
         public Form Form => _form;
 
         public IEnumerable<Entity> Search(IEnumerable<Entity> entities)
