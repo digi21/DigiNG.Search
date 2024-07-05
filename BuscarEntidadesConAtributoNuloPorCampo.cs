@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.Plugin.Search;
@@ -6,7 +7,7 @@ using Digi21.DigiNG.Plugin.Search;
 namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarEntidadesConAtributoNuloPorCampoName")]
-    public class BuscarEntidadesConAtributoNuloPorCampo : ISearcher
+    public class BuscarEntidadesConAtributoNuloPorCampo : ISearcher, IDisposable
     {
         private readonly FormularioBuscarEntidadesAtributoNuloPorCampo formulario = new FormularioBuscarEntidadesAtributoNuloPorCampo();
         public Form Form => formulario;
@@ -27,6 +28,20 @@ namespace DigiNG.Search
             }
 
             return localizados;
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                formulario?.Dispose();
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

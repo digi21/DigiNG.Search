@@ -9,7 +9,7 @@ using Digi21.Utilities;
 namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCódigoYCadenaName")]
-    public class BuscarTextosPorCódigoYCadena : ISearcher
+    public class BuscarTextosPorCódigoYCadena : ISearcher, IDisposable
     {
         private readonly FormularioPideCódigoYCadena _form = new FormularioPideCódigoYCadena();
         public Form Form => _form;
@@ -34,6 +34,19 @@ namespace DigiNG.Search
             return from texto in entities.QueTenganElCódigoConComodín(_form.Código).OfType<ReadOnlyText>()
                    where texto.Txt.ToUpper().Contains(_form.CadenaBuscar.ToUpper())
                    select texto;
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _form?.Dispose();
+            }
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

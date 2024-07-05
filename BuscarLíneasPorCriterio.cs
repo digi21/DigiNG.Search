@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Digi21.DigiNG.Entities;
@@ -8,7 +9,7 @@ using Digi21.Utilities;
 namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarLíneasPorCriterioName")]
-    public class BuscarLíneasPorCriterio : ISearcher
+    public class BuscarLíneasPorCriterio : ISearcher, IDisposable
     {
         private readonly FormularioBuscarLíneasCriterio form = new FormularioBuscarLíneasCriterio();
         public Form Form => form;
@@ -23,6 +24,20 @@ namespace DigiNG.Search
                 let línea = entidad as ReadOnlyLine
                 where línea.Closed
                 select entidad;
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                form?.Dispose();
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

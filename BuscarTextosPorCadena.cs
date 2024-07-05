@@ -8,7 +8,7 @@ using Digi21.DigiNG.Plugin.Search;
 namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarTextosPorCadenaName")]
-    public class BuscarTextosPorCadena : ISearcher
+    public class BuscarTextosPorCadena : ISearcher, IDisposable
     {
         private readonly FormularioPideCadena _form = new FormularioPideCadena();
         public Form Form => _form;
@@ -33,6 +33,20 @@ namespace DigiNG.Search
             return from texto in entities.OfType<ReadOnlyText>()
                    where texto.Txt.ToUpper().Contains(_form.CadenaBuscar.ToUpper())
                    select texto;
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if( disposing )
+            {
+                _form?.Dispose();
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

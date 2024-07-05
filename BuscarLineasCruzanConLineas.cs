@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.Plugin.Search;
@@ -8,7 +9,7 @@ using Digi21.Utilities;
 namespace DigiNG.Search
 {
     [LocalizableSearcher(typeof(MyResource), "BuscarLineasCruzanConLineasName")]
-    public class BuscarLineasCruzanConLineas : ISearcher
+    public class BuscarLineasCruzanConLineas : ISearcher, IDisposable
     {
         private readonly FormularioBuscarLíneasQueCruzanConOtrasLíneas formulario = new FormularioBuscarLíneasQueCruzanConOtrasLíneas();
         public System.Windows.Forms.Form Form => formulario;
@@ -31,6 +32,20 @@ namespace DigiNG.Search
                                     where segmento.Line.TieneAlgúnCódigoConComodín(códigosPrincipales)
                                     select segmento.Line;
             return líneasLocalizadas.Distinct();
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                formulario?.Dispose();
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
