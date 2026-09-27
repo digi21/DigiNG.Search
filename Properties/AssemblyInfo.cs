@@ -1,7 +1,6 @@
 ﻿using System.Resources;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Runtime.Versioning;
 
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -14,4 +13,3 @@ using System.Runtime.Versioning;
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
 [assembly: Guid("62ee782f-b833-4103-8ed1-8dae9a9bc5fb")]
 
-[assembly: SupportedOSPlatform("windows")]
